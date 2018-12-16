@@ -4,8 +4,13 @@ public class Car {
 	
 	private Engine engine;
 	
+	public Car() {
+		System.out.println("Car is constructed.");
+	}
+
 	public void driveTheCar() {
-		System.out.println("Driving te car...");
+		engine.running();
+		System.out.println("Driving the car...");
 	}
 
 	public Engine getEngine() {
@@ -13,6 +18,7 @@ public class Car {
 	}
 
 	public void setEngine(Engine engine) {
+		System.out.println("Putting engine in car.");
 		this.engine = engine;
 	}
 }
