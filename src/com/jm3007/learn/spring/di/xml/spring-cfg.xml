@@ -19,5 +19,19 @@
 	<bean id="car" class="com.jm3007.learn.spring.di.xml.Car">
 		<property name="engine" ref="engine" />
 	</bean>
+	<bean id="temp" class="com.jm3007.learn.spring.di.xml.Car">
+		<property name="engine" ref="engine" />
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<bean id="engine" class="com.jm3007.learn.spring.di.xml.Engine" />
 </beans>
