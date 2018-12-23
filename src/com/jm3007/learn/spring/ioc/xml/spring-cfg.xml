@@ -18,3 +18,6 @@
 	
 	<bean id="car" class="com.jm3007.learn.spring.ioc.xml.Car" />
 </beans>
+
+
+hhhhhhh

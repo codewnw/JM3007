@@ -27,3 +27,8 @@
 	<bean id="engine2" class="com.jm3007.learn.spring.di.xml.gooddesign.SuzukiEngine" />
 	<bean id="engine3" class="com.jm3007.learn.spring.di.xml.gooddesign.AshokaLeyLandEngine" />
 </beans>
+
+
+
+
+
