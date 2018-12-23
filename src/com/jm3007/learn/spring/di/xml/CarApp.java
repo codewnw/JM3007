@@ -11,7 +11,7 @@ public class CarApp {
 				"com/jm3007/learn/spring/di/xml/spring-cfg.xml");
 
 		Car car = (Car) context.getBean("car");
-
 		car.driveTheCar();
+		System.out.println("Main completed");
 	}
 }
