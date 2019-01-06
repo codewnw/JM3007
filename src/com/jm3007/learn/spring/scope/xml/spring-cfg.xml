@@ -13,7 +13,10 @@
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd
                            http://www.springframework.org/schema/tx
                            http://www.springframework.org/schema/tx/spring-tx.xsd
-                          http://www.springframework.org/schema/aop
-http://www.springframework.org/schema/aop/spring-aop.xsd">
-<bean id="car" class="com.jm3007.learn.spring.iocrev.xml.Car"/>
+                           http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd">
+	
+	<bean id="car" class="com.jm3007.learn.spring.scope.xml.Car" scope="singleton" />
+	
+	<bean id="bike" class="com.jm3007.learn.spring.scope.xml.Bike" scope="prototype" />
 </beans>
