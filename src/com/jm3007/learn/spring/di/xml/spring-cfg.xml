@@ -16,22 +16,24 @@
                            http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-	<bean id="car" class="com.jm3007.learn.spring.di.xml.Car">
+	<bean id="car" class="com.jm3007.learn.spring.di.xml.Car"
+		scope="singleton">
 		<property name="engine" ref="engine" />
 	</bean>
-	<bean id="temp" class="com.jm3007.learn.spring.di.xml.Car">
+	<!-- <bean id="temp" class="com.jm3007.learn.spring.di.xml.Car">
 		<property name="engine" ref="engine" />
-	</bean>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<bean id="engine" class="com.jm3007.learn.spring.di.xml.Engine" />
+	</bean> -->
+
+
+
+
+
+
+
+
+
+
+
+	<bean id="engine" class="com.jm3007.learn.spring.di.xml.Engine"
+		scope="prototype" />
 </beans>

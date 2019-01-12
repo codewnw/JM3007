@@ -9,10 +9,26 @@ public class CarApp {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/jm3007/learn/spring/di/xml/spring-cfg.xml");
+		System.out.println("---------------");
+		Engine engine = (Engine) context.getBean("engine");
+		System.out.println(engine.hashCode());
 
 		Car car = (Car) context.getBean("car");
 
-		car.driveTheCar();
+//		car.driveTheCar();
+		System.out.println("-------------");
+		System.out.println(car.hashCode());
+		System.out.println(car.getEngine().hashCode());
+
+		Car car2 = (Car) context.getBean("car");
+		System.out.println("-------------");
+		System.out.println(car2.hashCode());
+		System.out.println(car2.getEngine().hashCode());
+
+		System.out.println("---------------");
+		Engine engine2 = (Engine) context.getBean("engine");
+		System.out.println(engine2.hashCode());
+
 	}
 
 }

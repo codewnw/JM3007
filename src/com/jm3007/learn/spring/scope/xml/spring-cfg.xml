@@ -16,7 +16,7 @@
                            http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop.xsd">
 	
-	<bean id="car" class="com.jm3007.learn.spring.scope.xml.Car" scope="singleton" />
+	<bean id="car" class="com.jm3007.learn.spring.scope.xml.Car" destroy-method="cleanUp" init-method="mysdnkksn" scope="singleton" />
 	
 	<bean id="bike" class="com.jm3007.learn.spring.scope.xml.Bike" scope="prototype" />
 </beans>

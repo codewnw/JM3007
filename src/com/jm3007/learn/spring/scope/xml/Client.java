@@ -1,12 +1,13 @@
 package com.jm3007.learn.spring.scope.xml;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Client {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext(
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
 				"com//jm3007//learn//spring//scope//xml//spring-cfg.xml");
 		
 		Car car1 = (Car) context.getBean("car");
@@ -24,6 +25,8 @@ public class Client {
 
 		Bike bike2 = (Bike)context.getBean("bike");
 		System.out.println(bike2.hashCode());
+		
+		context.close();
 	}
 
 }
