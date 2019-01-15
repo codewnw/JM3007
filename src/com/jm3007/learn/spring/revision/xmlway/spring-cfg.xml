@@ -16,11 +16,16 @@
                            http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+	<context:property-placeholder
+		location="classpath:car.properties" />
+
 	<bean id="car" class="com.jm3007.learn.spring.revision.xmlway.Car"
 		scope="singleton">
 		<constructor-arg ref="engine" name="engine" />
 		<property name="airBag" ref="airBag" />
 		<property name="musicSystem" ref="philips" />
+		<property name="color" value="${color}" />
+		<property name="speed" value="${speed}" />
 	</bean>
 
 	<bean id="engine"
@@ -31,12 +36,12 @@
 	<bean id="airBag"
 		class="com.jm3007.learn.spring.revision.xmlway.AirBag"
 		scope="singleton" />
-		
-		<bean id="sony"
+
+	<bean id="sony"
 		class="com.jm3007.learn.spring.revision.xmlway.SonyMusicSystem"
 		scope="singleton" />
-		
-		<bean id="philips"
+
+	<bean id="philips"
 		class="com.jm3007.learn.spring.revision.xmlway.PhilipsMusicSystem"
 		scope="singleton" />
 </beans>

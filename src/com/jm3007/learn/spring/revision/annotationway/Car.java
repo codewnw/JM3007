@@ -2,6 +2,7 @@ package com.jm3007.learn.spring.revision.annotationway;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -9,6 +10,12 @@ import org.springframework.stereotype.Component;
 //@Scope("singleton")
 @Scope("prototype")
 public class Car {
+
+	@Value("${color}")
+	private String color;
+
+	@Value("${speed}")
+	private double speed;
 
 	private Engine engine;
 
@@ -29,7 +36,7 @@ public class Car {
 	public void driveTheCar() {
 		engine.start();
 		airBag.acivate();
-		System.out.println("Driving the car.");
+		System.out.println("Driving the " + color + " car at speed of " + speed + " KM/H.");
 		musicSystem.playMusic();
 	}
 
