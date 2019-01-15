@@ -2,9 +2,12 @@ package com.jm3007.learn.spring.revision.annotationway;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("myCar")
+//@Scope("singleton")
+@Scope("prototype")
 public class Car {
 
 	private Engine engine;
