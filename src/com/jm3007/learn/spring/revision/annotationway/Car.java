@@ -1,6 +1,7 @@
 package com.jm3007.learn.spring.revision.annotationway;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("myCar")
@@ -9,6 +10,7 @@ public class Car {
 	private Engine engine;
 
 	// dependency injection - thru field
+	@Qualifier("sony")
 	@Autowired
 	private MusicSystem musicSystem;
 
