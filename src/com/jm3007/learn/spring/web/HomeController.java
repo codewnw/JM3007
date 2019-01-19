@@ -11,10 +11,4 @@ public class HomeController {
 	public String showHomePage() {
 		return "home";
 	}
-	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String ffklmnalkf() {
-		System.out.println("Isdmlkdsmfl");
-		return "home";
-	}
 }

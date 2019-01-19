@@ -8,5 +8,9 @@
 </head>
 <body>
 <h1>I'm here............. Ok</h1>
+<a href="login">Login</a>
+
+<h1>Users</h1>
+<a href="users/show-form">Register</a>
 </body>
 </html>
