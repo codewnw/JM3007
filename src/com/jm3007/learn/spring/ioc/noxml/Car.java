@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Car {
-
 	public void driveTheCar() {
 		System.out.println("Driving the Car...");
 	}
