@@ -55,6 +55,12 @@ public class Student {
 		this.studentDetail = studentDetail;
 	}
 
+	public void addStudentDetail(StudentDetail studentDetail) {
+		studentDetail.setStudent(this);
+		this.studentDetail = studentDetail;
+	}
+
+	
 	public Long getId() {
 		return id;
 	}
