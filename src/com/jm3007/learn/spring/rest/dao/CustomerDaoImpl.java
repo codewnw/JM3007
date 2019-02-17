@@ -25,7 +25,11 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	@Transactional
 	public Customer getCustomer(Long id) {
-		return sessionFactory.openSession().get(Customer.class, id);
+		Customer c = sessionFactory.openSession().get(Customer.class, id);
+		if(c == null) {
+			throw new RuntimeException("Customer Not Found!!!");
+		}
+		return c;
 	}
 
 	@Override
