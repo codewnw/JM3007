@@ -15,25 +15,8 @@
                            http://www.springframework.org/schema/tx/spring-tx.xsd
                            http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop.xsd">
-
-	<bean id="car" class="com.jm3007.learn.spring.di.xml.Car"
-		scope="singleton">
-		<property name="engine" ref="engine" />
-	</bean>
-	<!-- <bean id="temp" class="com.jm3007.learn.spring.di.xml.Car">
-		<property name="engine" ref="engine" />
-	</bean> -->
-
-
-
-
-
-
-
-
-
-
-
-	<bean id="engine" class="com.jm3007.learn.spring.di.xml.Engine"
-		scope="prototype" />
+	
+	<bean id="car" class="com.jm3007.learn.spring.scope.xml.Car" destroy-method="cleanUp" init-method="mysdnkksn" scope="singleton" />
+	
+	<bean id="bike" class="com.jm3007.learn.spring.scope.xml.Bike" scope="prototype" />
 </beans>
